@@ -3,7 +3,7 @@ import Main from "../template/Main";
 
 function Home() {
   return (
-    <Main title="Início" subtitle="Lista de cervejas HOME">
+    <Main>
       <div>Bem Vindo!</div>
       <hr />
       <p>Sistema de Geladas</p>
