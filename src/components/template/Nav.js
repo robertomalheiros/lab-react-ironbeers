@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 
 function Nav(props) {
   return (
-    <aside className="menu-area">
+    <aside className="menuArea">
       <nav className="menu">
         {/* Refatorar em casa! */}
-        <Link to="/">
-          <i className="home"></i> Início
-        </Link>
         <Link to="/beers">
           <i className="beers"></i> Beers
         </Link>

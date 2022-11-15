@@ -9,9 +9,13 @@ import Footer from "../components/template/Footer";
 function App() {
   return (
     <div className="App">
-      <Logo />
-      <Nav />
-      <Rotas />
+      <div id="corpoElements">
+        <div className="corpo">
+          <Logo />
+          <Nav />
+        </div>
+        <Rotas />
+      </div>
       <Footer />
     </div>
   );
