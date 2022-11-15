@@ -28,8 +28,6 @@ function AllBeers() {
   return (
     <Main>
       <img src={Ibeers} alt="logo" />
-      <div className="display-4">Lista de geladas!</div>
-
       {cervejas.map((cerveja) => {
         return (
           <div className="cerveja" key={cerveja._id}>
