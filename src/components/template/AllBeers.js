@@ -35,9 +35,11 @@ function AllBeers() {
               <img className="imgCervejas" src={cerveja.image} alt="logo" />
             </div>
             <div>
-              <p className="mb-3">{cerveja.nome}</p>
-              <p className="mb-0">{cerveja.tagline}</p>
-              <p className="mb-0">Created by: {cerveja.contributed_by}</p>
+              <h3>{cerveja.nome}</h3>
+              <p>{cerveja.tagline}</p>
+              <p>
+                <bold> Created by:</bold> {cerveja.contributed_by}
+              </p>
             </div>
           </div>
         );

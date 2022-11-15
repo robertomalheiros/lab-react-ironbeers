@@ -4,8 +4,10 @@ aside.logo {
   justify-content: center;
   align-items: center;
   max-width: 200px;
+  box-shadow: 14px 14px 16px #541e01, -14px -14px 16px #782a01;
 }
 
 aside.logo img {
   max-width: 100px;
+  background-color: var(--bg-dark);
 }

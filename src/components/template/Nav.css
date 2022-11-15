@@ -1,6 +1,8 @@
 aside.menuArea {
   background-color: var(--bg-dark);
-  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 15px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 0px;
+  background: linear-gradient(145deg, #5c2001, #6d2701);
+  box-shadow: 14px 14px 16px #541e01, -14px -14px 16px #782a01;
   max-width: 200px;
   min-block-size: 100%;
 }
@@ -12,8 +14,10 @@ aside.menuArea {
   font-weight: 300;
   padding: 15px;
   max-width: 200px;
+  background: linear-gradient(145deg, #5c2001, #6d2701);
+  box-shadow: 14px 14px 16px #541e01, -14px -14px 16px #782a01;
 }
 
 .menu a:hover {
-  background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+  background: linear-gradient(135deg, #662401 0%, #ff6b1b 100%);
 }

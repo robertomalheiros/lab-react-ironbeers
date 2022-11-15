@@ -7,9 +7,9 @@ function RandomBeer() {
   return (
     <Main>
       <img src={Irandombeer} alt="logo" />
-      <div className="display-4">Cerveja Aleatória</div>
+      <h3>Cerveja Aleatória</h3>
       <hr />
-      <p className="mb-0">Cerveja Selecionada</p>
+      <p>Cerveja Selecionada</p>
     </Main>
   );
 }
