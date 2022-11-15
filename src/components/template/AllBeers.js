@@ -6,7 +6,7 @@ import axios from "axios";
 
 function AllBeers() {
   const [cervejas, setcervejas] = useState([]);
-  const [reload, setReload] = useState(false);
+  const [reload] = useState(false);
 
   //fetch -> api do navegador -> requisições http (get, put, pacth, delete, post) -> axios
   //promisses -> async/await
@@ -25,18 +25,10 @@ function AllBeers() {
     fetchStudents();
   }, [reload]);
 
-  function handleReload() {
-    setReload(!reload);
-  }
-
-  console.log(cervejas);
-
   return (
     <Main>
       <img src={Ibeers} alt="logo" />
       <div className="display-4">Lista de geladas!</div>
-
-      <button onClick={handleReload}>Recarregar api!!</button>
 
       {cervejas.map((cerveja) => {
         return (
