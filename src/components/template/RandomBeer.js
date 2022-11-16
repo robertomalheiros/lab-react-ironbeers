@@ -6,10 +6,14 @@ import Main from "../template/Main";
 function RandomBeer() {
   return (
     <Main>
-      <img src={Irandombeer} alt="logo" />
-      <h3>Cerveja Aleatória</h3>
-      <hr />
-      <p>Cerveja Selecionada</p>
+      <div className="ImgLogo">
+        <img src={Irandombeer} alt="logo" />
+      </div>
+      <div className="AllBeersText">
+        <h3>Cerveja Aleatória</h3>
+        <hr />
+        <p>Cerveja Selecionada</p>
+      </div>
     </Main>
   );
 }

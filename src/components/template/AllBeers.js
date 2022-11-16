@@ -3,6 +3,7 @@ import Ibeers from "../../assets/imgs/beers.png";
 import Main from "../template/Main";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function AllBeers() {
   const [cervejas, setcervejas] = useState([]);
@@ -18,7 +19,7 @@ function AllBeers() {
 
   useEffect(() => {
     async function fetchStudents() {
-      const response = await axios.get("https://ironbeer-api.fly.dev/ ");
+      const response = await axios.get("https://ironbeer-api.fly.dev/");
       setcervejas(response.data);
     }
 
@@ -26,16 +27,20 @@ function AllBeers() {
   }, [reload]);
 
   return (
-    <Main>
-      <img src={Ibeers} alt="logo" />
+    <Main className="MainAll">
+      <div className="ImgLogo">
+        <img src={Ibeers} alt="logo" />
+      </div>
       {cervejas.map((cerveja) => {
         return (
           <div className="cerveja" key={cerveja._id}>
             <div>
-              <img className="imgCervejas" src={cerveja.image} alt="logo" />
+              <Link to={`/detalhes-beer/${cerveja._id}`}>
+                <img className="imgCervejas" src={cerveja.image} alt="logo" />
+              </Link>
             </div>
-            <div>
-              <h3>{cerveja.nome}</h3>
+            <div className="AllBeersText">
+              <h4>{cerveja.nome}</h4>
               <p>{cerveja.tagline}</p>
               <p>
                 <bold> Created by:</bold> {cerveja.contributed_by}

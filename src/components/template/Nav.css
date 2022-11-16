@@ -8,6 +8,8 @@ aside.menuArea {
 }
 
 .menu a {
+  font-family: "Anton", sans-serif;
+  color: aliceblue;
   display: block;
   text-decoration: none;
   color: #fff;
