@@ -35,8 +35,8 @@ function BeerDetalhes() {
   }, [reload]);
 
   async function handleDelete(e) {
-    await axios.delete(`https://ironrest.herokuapp.com/enap-teste/${beerID}`);
-    navigate("/api-teste");
+    await axios.delete(`https://ironbeer-api.fly.dev/${beerID}`);
+    navigate("/beers");
   }
 
   function handleChange(e) {
@@ -52,10 +52,7 @@ function BeerDetalhes() {
       //deletar a chave _id do obj
       delete clone._id;
 
-      await axios.put(
-        `https://ironrest.herokuapp.com/enap-teste/${beerID}`,
-        clone
-      );
+      await axios.put(`https://ironbeer-api.fly.dev/${beerID}`, clone);
       setReload(!reload);
       setShowForm(false);
     } catch (error) {
@@ -161,7 +158,7 @@ function BeerDetalhes() {
           Editar Cerveja!
         </button>
         {"           "}
-        <button onClick={handleDelete}>Deletar usuário!</button>
+        <button onClick={handleDelete}>Deletar Cerveja!</button>
       </div>
     </div>
   );

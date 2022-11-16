@@ -3,11 +3,12 @@ aside.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 200px;
+  max-width: 180px;
   box-shadow: 14px 14px 16px #541e01, -14px -14px 16px #782a01;
 }
 
 aside.logo img {
+  padding: 0.1rem;
   max-width: 100px;
   background-color: var(--bg-dark);
 }
