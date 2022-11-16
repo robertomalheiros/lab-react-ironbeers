@@ -43,7 +43,7 @@ function NewBeer() {
     e.preventDefault();
     console.log(form);
 
-    await axios.put("https://ironbeer-api.fly.dev/", form);
+    await axios.post("https://ironbeer-api.fly.dev/new", form);
     setForm({
       name: "",
       image: "",

@@ -35,7 +35,7 @@ function BeerDetalhes() {
   }, [reload]);
 
   async function handleDelete(e) {
-    await axios.delete(`https://ironbeer-api.fly.dev/${beerID}`);
+    await axios.delete(`https://ironbeer-api.fly.dev/delete/${beerID}`);
     navigate("/beers");
   }
 
@@ -46,13 +46,16 @@ function BeerDetalhes() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    navigate("/beers");
+
     try {
       //clonar o state para um obj JS
       const clone = { ...form };
       //deletar a chave _id do obj
       delete clone._id;
+      console.log(clone);
 
-      await axios.put(`https://ironbeer-api.fly.dev/${beerID}`, clone);
+      await axios.put(`https://ironbeer-api.fly.dev/edit/${beerID}`, clone);
       setReload(!reload);
       setShowForm(false);
     } catch (error) {
